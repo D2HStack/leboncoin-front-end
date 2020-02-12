@@ -5,6 +5,7 @@ import "./assets/css/style.css";
 
 import Header from "./components/Header";
 import Search from "./components/Search";
+import Footer from "./components/Footer";
 
 import Offers from "./containers/Offers";
 import Offer from "./containers/Offer";
@@ -24,6 +25,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
+      <Footer></Footer>
     </div>
   );
 }
