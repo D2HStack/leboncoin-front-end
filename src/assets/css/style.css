@@ -1,0 +1,130 @@
+@font-face {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-color: white;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Header */
+
+.header-bg {
+  width: 100vw;
+  background-color: white;
+  z-index: 1;
+}
+
+.header-container {
+  height: 60px;
+  width: 1060px;
+  /* background-color: aqua; */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.header-logo {
+  width: 140px;
+}
+
+.header-left {
+  display: flex;
+}
+
+.header-button-post-classified {
+  width: 200px;
+  height: 40px;
+  background-color: #f36025;
+  margin: auto 0;
+  font-size: 14px;
+  line-height: 21px;
+  color: white;
+  font-weight: bold;
+}
+
+.header-search {
+  width: 120px;
+  height: 60px;
+  background-color: white;
+  /* margin: auto 0; */
+  font-size: 14px;
+  line-height: 21px;
+  color: #191919;
+  font-weight: bold;
+  border-bottom: #f36025 5px solid;
+}
+
+.header-right {
+  display: flex;
+}
+
+/* Icon text */
+
+.icon-text {
+  color: #1a1a1a;
+  font-size: 12px;
+  line-height: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 60px;
+}
+
+/* Search */
+
+.search-banner {
+  background-color: #f36025;
+  width: 100vw;
+  height: 300px;
+  border-radius: 10000px / 700px;
+  margin-top: -200px;
+  z-index: 0;
+}
+
+.search-container {
+  width: 930px;
+  height: 155px;
+  z-index: 1;
+  background-color: white;
+  margin-top: -60px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #d2d2d2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.search-input {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  text-decoration: inherit;
+  width: 330px;
+  height: 40px;
+  background-color: #f2f5f6;
+  color: #788898;
+  margin: 0 10px;
+}
+
+.search-button {
+  width: 260px;
+  height: 45px;
+  background-color: #3978d1;
+  border-radius: 3px;
+  color: white;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: bold;
+  margin: 0 10px;
+}
