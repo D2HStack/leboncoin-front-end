@@ -14,7 +14,6 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
-      <Search></Search>
       <Router>
         <Switch>
           <Route path="/offers">
