@@ -278,7 +278,7 @@ body {
 
 .offer-title {
   font-size: 20px;
-  line-height: 18px;
+  line-height: 24px;
   color: #191919;
   padding-left: 20px;
 }
@@ -286,14 +286,14 @@ body {
 .offer-price {
   font-size: 16px;
   font-weight: bold;
-  line-height: 6px;
+  line-height: 20px;
   color: #f36025;
   padding-left: 20px;
 }
 
 .offer-created {
   font-size: 14px;
-  line-height: 16px;
+  line-height: 18px;
   color: #191919;
   padding-left: 20px;
 }
@@ -352,4 +352,17 @@ body {
 .hr {
   border: solid 0.5px #d5d7dc;
   margin: 0;
+}
+
+.signup-container {
+  display: flex;
+  margin-top: 100px;
+  width: 1000px;
+}
+.signin-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  width: 1000px;
 }

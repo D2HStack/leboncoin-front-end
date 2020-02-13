@@ -1,12 +1,13 @@
 import React from "react";
 // import logo from src
 import logo from "../assets/img/logo-leboncoin.png";
+import { useHistory } from "react-router-dom";
 
 // import components
 import IconText from "../components/IconText";
 
-function Header(props) {
-  //   const {} = props;
+function Header({ isLogged, setIsLogged }) {
+  // let history = useHistory();
   return (
     <>
       <div className="header-bg">
@@ -28,7 +29,21 @@ function Header(props) {
             <IconText icon="far fa-bell" text="Mes recherches"></IconText>
             <IconText icon="far fa-heart" text="Mes favoris"></IconText>
             <IconText icon="far fa-comment-alt" text="Messages"></IconText>
-            <IconText icon="far fa-user" text="Se connecter"></IconText>
+            <div
+              onClick={() => {
+                if (isLogged) {
+                  setIsLogged(false);
+                  // history.push("/signin");
+                } else {
+                  // history.push("/signin");
+                }
+              }}
+            >
+              <IconText
+                icon="far fa-user"
+                text={isLogged ? "seDéconnecter" : "Se connecter"}
+              ></IconText>
+            </div>
           </div>
         </div>
       </div>
