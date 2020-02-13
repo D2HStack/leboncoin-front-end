@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createRef } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import timeToString from "../functions/timeToString";
 
 function Offer(props) {
   const { id } = useParams();
@@ -27,21 +28,52 @@ function Offer(props) {
 
   return (
     <>
-      <div>
-        {isLoading ? (
-          "Chargement en cours ... "
-        ) : (
-          <div>
-            <div>
-              {pictures ? (
-                <img className="offer-img" alt={title} src={pictures[0]}></img>
-              ) : (
-                ""
-              )}
+      <div className="bg-grey">
+        <div>
+          {isLoading ? (
+            "Chargement en cours ... "
+          ) : (
+            <div className="offer-container">
+              <div className="offer-container-left">
+                <div>
+                  {pictures ? (
+                    <img
+                      className="offer-img"
+                      alt={title}
+                      src={pictures[0]}
+                    ></img>
+                  ) : (
+                    ""
+                  )}
+                </div>
+                <div>
+                  <div className="offer-information">
+                    <div>
+                      <p className="offer-title">{title}</p>
+                      <p className="offer-price">{price} € </p>
+                    </div>
+                    <p className="offer-created">{timeToString(created)}</p>
+                  </div>
+                  <div className="offer-description">
+                    <p className="offer-description-title">Description</p>
+                    <p className="offer-description-text">{description}</p>
+                  </div>
+                </div>
+              </div>
+              <div className="offer-container-right">
+                <p className="offer-creator-username">
+                  {creator.account.username}
+                </p>
+                <hr className="hr"></hr>
+                <div className="offer-creator-buy-container">
+                  <button className="offer-creator-buy">
+                    <i className="fas fa-shopping-cart"> Acheter</i>
+                  </button>
+                </div>
+              </div>
             </div>
-            <div></div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </>
   );
